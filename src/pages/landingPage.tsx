@@ -3,7 +3,7 @@
 import self from "../assets/self-animated.png";
 const LandingPage = () => {
   return (
-    <div className="relative h-screen text-white border-2 border-yellow-500">
+    <div className="relative h-screen text-white p-4">
       {/* Background */}
 
       {/* Content */}

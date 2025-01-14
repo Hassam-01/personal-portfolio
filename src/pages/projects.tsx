@@ -1,28 +1,51 @@
 import React, { useState } from "react";
 import { Dialog } from "@headlessui/react";
+import {
+  TbCircleNumber1,
+  TbCircleNumber2,
+  TbCircleNumber3,
+  TbCircleNumber4,
+  TbCircleNumber5,
+  TbCircleNumber6,
+  TbCircleNumber7,
+  TbCircleNumber8,
+  TbCircleNumber9,
+} from "react-icons/tb";
 
 const projects = [
   { id: 1, title: "Project One", description: "Description of project one." },
   { id: 2, title: "Project Two", description: "Description of project two." },
-  {
-    id: 3,
-    title: "Project Three",
-    description: "Description of project three.",
-  },
+  { id: 3, title: "Project Three", description: "Description of project three." },
   { id: 4, title: "Project Four", description: "Description of project four." },
   { id: 5, title: "Project Five", description: "Description of project five." },
   { id: 6, title: "Project Six", description: "Description of project six." },
-  {
-    id: 7,
-    title: "Project Seven",
-    description: "Description of project seven.",
-  },
-  {
-    id: 8,
-    title: "Project Eight",
-    description: "Description of project eight.",
-  },
+  { id: 7, title: "Project Seven", description: "Description of project seven." },
+  { id: 8, title: "Project Eight", description: "Description of project eight." },
   { id: 9, title: "Project Nine", description: "Description of project nine." },
+];
+
+const pointsMD = [
+  { x: 100, y: 88 },
+  { x: 250, y: 125 },
+  { x: 400, y: 150 },
+  { x: 450, y: 220 },
+  { x: 310, y: 235 },
+  { x: 170, y: 250 },
+  { x: 40, y: 260 },
+  { x: -100, y: 285 },
+  { x: -10, y: 370 },
+];
+
+const numberIcons = [
+  TbCircleNumber1,
+  TbCircleNumber2,
+  TbCircleNumber3,
+  TbCircleNumber4,
+  TbCircleNumber5,
+  TbCircleNumber6,
+  TbCircleNumber7,
+  TbCircleNumber8,
+  TbCircleNumber9,
 ];
 
 const ProjectPath = () => {
@@ -33,34 +56,39 @@ const ProjectPath = () => {
   };
 
   return (
-    <div className="relative w-full h-screen bg-dark flex items-center justify-center border-2 border-red-500">
-      {/* SVG for the curved path */}
+    <div className="relative w-full h-screen bg-dark flex items-center justify-center">
+      <h1 className="font-extrabold text-4xl">PROJECTS</h1>
       <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 400">
         <path
-        //   d="M0 0 Q10 250, 350 150 T 330 500 T 0 250"
-        // d="M0 0 Q100 200, 200 100 T 300 200 T 400 100"
-          d="M0 0 Q0 100, 400 150 T 200 250"
+          d="M0 0 Q0 100, 400 150 T 170 250 T 150 400"
           stroke="white"
-          strokeWidth="2"   
+          strokeWidth="2"
           fill="transparent"
           strokeDasharray="4"
         />
-        <circle cx="0" cy="100" r="5" fill="yellow" />
-        <circle cx="400" cy="150" r="5" fill="yellow" />
-
-        {projects.map((project, index) => (
-          <circle
-            key={project.id}
-            cx={50 + index * 100}
-            cy={index % 2 === 0 ? 50 : 150}
-            r="15"
-            fill="red"
-            className="cursor-pointer"
-            onClick={() => handleClick(project.id)}
-          />
-        ))}
+        {projects.map((project, index) => {
+          const Icon = numberIcons[index];
+          const isSelected = selectedProject === project.id;
+          return (
+            <foreignObject
+              key={project.id}
+              x={pointsMD[index].x - 15}
+              y={pointsMD[index].y - 15}
+              width="40"
+              height="40"
+            >
+              <div
+                className={`w-8 h-8 rounded-full flex items-center justify-center cursor-pointer ${
+                  isSelected ? "bg-blue-500" : "bg-black"
+                }`}
+                onClick={() => handleClick(project.id)}
+              >
+                <Icon className="text-white text-xl" />
+              </div>
+            </foreignObject>
+          );
+        })}
       </svg>
-      {/* Popup for project details */}
       {selectedProject !== null && (
         <Dialog
           open={true}
@@ -70,8 +98,7 @@ const ProjectPath = () => {
           <div className="bg-dark p-6 rounded shadow-lg w-1/2">
             <h2 className="text-white text-2xl mb-4">
               {
-                projects.find((project) => project.id === selectedProject)
-                  ?.title
+                projects.find((project) => project.id === selectedProject)?.title
               }
             </h2>
             <p className="text-white">
