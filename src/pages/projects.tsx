@@ -11,6 +11,7 @@ import {
   TbCircleNumber8,
   TbCircleNumber9,
 } from "react-icons/tb";
+import Three from "../components/three";
 
 const projects = [
   { id: 1, title: "Project One", description: "Description of project one." },
@@ -57,6 +58,7 @@ const ProjectPath = () => {
 
   return (
     <div className="relative w-full h-screen bg-dark flex items-center justify-center">
+      <Three />
       <h1 className="font-extrabold text-4xl">PROJECTS</h1>
       <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 400">
         <path

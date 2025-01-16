@@ -8,10 +8,13 @@ const LandingPage = () => {
 
       {/* Content */}
       <div className="relative z-10 md:flex-row-reverse flex flex-col items-end justify-start h-full">
-        <img src={self} alt="self" className="h-[800px]"/>
-      <div className="relative z-10 flex flex-col items-center justify-center h-full">
+<img
+  src={self}
+  alt="self"
+  className="h-[400px] md:h-[800px] w-auto object-contain "
+/>      <div className="relative z-10 flex flex-col items-center justify-center h-full">
         <h1 className="text-4xl font-bold">Hi, I’m Hassam Ali,</h1>
-        <h2 className="text-6xl font-extrabold mt-4">I'M A WEB DEVELOPER</h2>
+        <h2 className="md:text-6xl text-5xl font-extrabold mt-4 text-center">I'M A WEB DEVELOPER</h2>
         <p className="mt-4 max-w-md text-center text-gray-300">
         A passionate web developer from Skardu, Pakistan! Pursuing undergrade from NUST, Islamabad, I specialize in designing sleek, functional, and user-centric websites. Whether it’s breathing life into creative ideas or solving complex digital challenges, I’m here to make it happen. Let’s build something amazing together!"
         </p>
