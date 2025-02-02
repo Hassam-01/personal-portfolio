@@ -9,7 +9,10 @@ export default function Navbar() {
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
         setIsOpen(false);
       }
     };
@@ -20,15 +23,15 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="sticky top-0 z-50 bg-gray-900 bg-opacity-80 backdrop-blur-lg shadow-lg">
-      <div className="flex justify-between items-center text-white p-4 max-w-7xl mx-auto">
+    <div className="sticky top-0 z-50  bg-opacity-80 backdrop-blur-lg shadow-lg">
+      <div className="flex justify-between items-center text-white p-2 max-w-7xl mx-auto">
         {/* Logo */}
         <div className="text-2xl font-bold">
-          <h1>MyBrand</h1>
+          <h1>Hassam</h1>
         </div>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex space-x-6 text-lg font-medium  items-center">
+        <div className="hidden md:flex space-x-12 text-lg font-medium  items-center">
           <a href="#home" className="hover:text-gray-400 transition">
             Home
           </a>
@@ -41,14 +44,25 @@ export default function Navbar() {
           <a href="#contact" className="hover:text-gray-400 transition">
             Contact
           </a>
-          <a href="https://www.instagram.com/ali.hassam1/" className="hover:text-gray-400 transition items-center">
-          <FaInstagram/>
+        </div>
+        <div className="hidden md:flex space-x-6 text-lg font-medium  items-center">
+          <a
+            href="https://www.instagram.com/ali.hassam1/"
+            className="hover:text-gray-400 transition items-center"
+          >
+            <FaInstagram />
           </a>
-          <a href="https://github.com/Hassam-01" className="hover:text-gray-400 transition">
-          <IoLogoGithub/>
+          <a
+            href="https://github.com/Hassam-01"
+            className="hover:text-gray-400 transition"
+          >
+            <IoLogoGithub />
           </a>
-          <a href="https://www.linkedin.com/in/hassam-ali-14681618a/" className="hover:text-gray-400 transition">
-            <GrLinkedin/>
+          <a
+            href="https://www.linkedin.com/in/hassam-ali-14681618a/"
+            className="hover:text-gray-400 transition"
+          >
+            <GrLinkedin />
           </a>
         </div>
 
@@ -57,16 +71,16 @@ export default function Navbar() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="text-white focus:outline-none"
-            >
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              >
+            >
               {isOpen ? (
-                  <path
+                <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
@@ -78,8 +92,8 @@ export default function Navbar() {
                   strokeLinejoin="round"
                   strokeWidth={2}
                   d="M4 6h16M4 12h16m-7 6h7"
-                  />
-                )}
+                />
+              )}
             </svg>
           </button>
         </div>
@@ -87,12 +101,12 @@ export default function Navbar() {
 
       {/* Faded Background When Dropdown is Open */}
       {isOpen && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 z-40"></div>
-        )}
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-40"></div>
+      )}
 
       {/* Mobile Dropdown */}
       {isOpen && (
-          <div
+        <div
           ref={dropdownRef}
           className="absolute top-full left-0 right-0 bg-gray-900 text-white p-4 space-y-4 z-50"
         >
@@ -100,21 +114,21 @@ export default function Navbar() {
             href="#home"
             className="block hover:text-gray-400 transition"
             onClick={() => setIsOpen(false)}
-            >
+          >
             Home
           </a>
           <a
             href="#projects"
             className="block hover:text-gray-400 transition"
             onClick={() => setIsOpen(false)}
-            >
+          >
             Projects
           </a>
           <a
             href="#about"
             className="block hover:text-gray-400 transition"
             onClick={() => setIsOpen(false)}
-            >
+          >
             About
           </a>
           <a
@@ -128,22 +142,22 @@ export default function Navbar() {
             href="https://www.instagram.com/ali.hassam1/"
             className="block hover:text-gray-400 transition"
             onClick={() => setIsOpen(false)}
-            >
-                <FaInstagram/>
+          >
+            <FaInstagram />
           </a>
           <a
             href="https://github.com/Hassam-01"
             className="block hover:text-gray-400 transition"
             onClick={() => setIsOpen(false)}
-            >
-            <IoLogoGithub/>
+          >
+            <IoLogoGithub />
           </a>
           <a
             href="https://www.linkedin.com/in/hassam-ali-14681618a/"
             className="block hover:text-gray-400 transition"
             onClick={() => setIsOpen(false)}
-            >
-              <GrLinkedin/>
+          >
+            <GrLinkedin />
           </a>
         </div>
       )}

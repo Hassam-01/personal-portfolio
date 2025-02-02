@@ -3,6 +3,9 @@ import Navbar from "./components/navbar";
 import LandingPage from "./pages/landingPage";
 import ProjectPath from "./pages/projects";
 import bg from "./assets/background.svg";
+import Education from "./pages/education";
+import TechStack from "./pages/techstack";
+import Contact from "./pages/contact";
 
 // import Three from "./components/three";
 function App() {
@@ -24,9 +27,17 @@ function App() {
     <section id="Project">
     <ProjectPath/>
     </section>
-    <section id="Experience"> </section>
-    <section id="Education"> </section>
-    <section id="Contact"> </section>
+    <section id="Experience">
+    </section>
+    <section id="Education">
+      <Education/>
+    </section>
+    <section id="Tech Stack"> 
+      <TechStack/>
+    </section>
+    <section id="Contact"> 
+      <Contact/>
+    </section>
   </div>);
 }
 
