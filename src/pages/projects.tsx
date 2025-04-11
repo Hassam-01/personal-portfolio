@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import ProjectCard from "../components/projectCard";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; // Import icons
 
@@ -12,7 +12,7 @@ function Projects() {
     { projectId: 6 },
   ];
 
-  const [scrollPosition, setScrollPosition] = useState(0);
+  // const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleScroll = (direction: string) => {
     const container = document.getElementById("projects-container");
@@ -23,7 +23,7 @@ function Projects() {
       } else {
         container.scrollLeft += scrollAmount;
       }
-      setScrollPosition(container.scrollLeft);
+      // setScrollPosition(container.scrollLeft);
     }
   };
 
