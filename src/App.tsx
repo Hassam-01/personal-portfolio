@@ -6,6 +6,7 @@ import bg from "./assets/background.svg";
 import Education from "./pages/education";
 import TechStack from "./pages/techstack";
 import Contact from "./pages/contact";
+import Experience from "./pages/experience";
 
 // import Three from "./components/three";
 function App() {
@@ -28,12 +29,13 @@ function App() {
     <ProjectPath/>
     </section>
     <section id="Experience">
-    </section>
-    <section id="Education">
-      <Education/>
+      <Experience/>
     </section>
     <section id="Tech Stack"> 
       <TechStack/>
+    </section>
+    <section id="Education">
+      <Education/>
     </section>
     <section id="Contact"> 
       <Contact/>
