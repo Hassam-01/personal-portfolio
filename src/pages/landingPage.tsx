@@ -18,12 +18,6 @@ const LandingPage = () => {
         <p className="mt-4 max-w-md text-center text-gray-300">
         A passionate web developer from Skardu, Pakistan! Pursuing undergrade from NUST, Islamabad, I specialize in designing sleek, functional, and user-centric websites. Whether it’s breathing life into creative ideas or solving complex digital challenges, I’m here to make it happen. Let’s build something amazing together!"
         </p>
-        <a
-          href="#"
-          className="mt-6 inline-block px-6 py-3 bg-white text-black rounded-full font-semibold hover:bg-gray-200"
-          >
-            Start
-        </a>
       </div>
 </div>
     </div>

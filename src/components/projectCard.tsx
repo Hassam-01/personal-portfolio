@@ -13,6 +13,8 @@ import abd_03 from "../assets/abd_03.png";
 import iot_01 from "../assets/iot_01.png";
 import iot_02 from "../assets/iot_02.png";
 import iot_03 from "../assets/iot_03.png";
+import note_01 from "../assets/notetaking_01.png";
+import note_02 from "../assets/notetaking_02.png";
 
 function ProjectCard({ projectId }: { projectId: number }) {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -134,7 +136,7 @@ function ProjectCard({ projectId }: { projectId: number }) {
       title: "NoteKeeping",
       description:
         "A feature-rich note-keeping web app that allows users to take notes, doodle drawings, and collaborate through live meetings in one unified platform.",
-      img: "https://via.placeholder.com/150",
+      img: note_01,
       techStack: [
         "React",
         "Next.js",
@@ -157,7 +159,7 @@ function ProjectCard({ projectId }: { projectId: number }) {
         "Data persistence using PostgreSQL",
         "User-friendly and responsive design with Tailwind CSS",
       ],
-      images: ["https://via.placeholder.com/150"],
+      images: [note_02, note_01],
       githubLink: "https://github.com/Hassam-01/NoteKeeping",
       intro:
         "A note-keeping web app that lets users jot down notes, sketch drawings, and collaborate via live video meetings, all in one place.",

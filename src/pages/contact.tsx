@@ -65,7 +65,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="py-16 px-4 sm:px-8 min-h-screen bg-gray-900">
+    <div className="py-16 px-4 sm:px-8 min-h-screen ">
       <div className="max-w-2xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: -20 }}

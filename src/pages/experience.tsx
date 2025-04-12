@@ -1,7 +1,13 @@
 import { motion } from "framer-motion";
 import { FaBriefcase, FaCalendarAlt, FaCode } from "react-icons/fa";
-import { SiTypescript, SiReact, SiNodedotjs, SiRedis, SiMysql } from "react-icons/si";
-
+import {
+  SiTypescript,
+  SiReact,
+  SiNodedotjs,
+  SiRedis,
+  SiMysql,
+} from "react-icons/si";
+import { IoLocation } from "react-icons/io5";
 const Experience = () => {
   return (
     <div className="py-16 px-4 sm:px-8">
@@ -22,7 +28,7 @@ const Experience = () => {
         </motion.div>
 
         {/* Timeline Bar */}
-        <motion.div 
+        <motion.div
           className="h-1 w-full rounded-full mb-12"
           initial={{ width: 0 }}
           animate={{ width: "100%" }}
@@ -47,14 +53,24 @@ const Experience = () => {
             {/* Experience Details */}
             <div className="flex-1">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
-                <h3 className="text-xl font-bold text-white">Software Developer Intern (Full-time)</h3>
+                <h3 className="text-xl font-bold text-white">
+                  Software Developer Intern (Full-time)
+                </h3>
                 <div className="flex items-center gap-2 text-sm text-gray-400">
                   <FaCalendarAlt />
                   <span>Feb 2025 - Present</span>
                 </div>
               </div>
 
-              <h4 className="text-lg font-semibold text-blue-400 mb-3">OneScreen Solutions</h4>
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                <h4 className="text-lg font-semibold text-blue-400">
+                  OneScreen Solutions
+                </h4>
+                <div className="flex items-center gap-1 text-xs text-gray-400">
+                  <IoLocation className="text-gray-500" />
+                  <span>Islamabad, Pakistan</span>
+                </div>
+              </div>
 
               {/* Responsibilities */}
               <div className="mb-4">
@@ -63,10 +79,23 @@ const Experience = () => {
                   Key Responsibilities & Achievements
                 </h5>
                 <ul className="list-disc pl-5 space-y-1 text-gray-300">
-                  <li>Developing and maintaining web applications using modern frameworks</li>
-                  <li>Collaborating with cross-functional teams to deliver high-quality software solutions</li>
-                  <li>Implementing responsive UI components and optimizing application performance</li>
-                  <li>Participating in code reviews and contributing to architectural decisions</li>
+                  <li>
+                    Contributed as a Full Stack Developer on a commercial
+                    project, handling both frontend and backend development.
+                  </li>
+                  <li>
+                    Designed and implemented responsive user interfaces.
+                  </li>
+                  <li>
+                    Developed RESTful APIs and backend logic.
+                  </li>
+                  <li>
+                    Managed database schemas, queries, and optimization.
+                  </li>
+                  <li>
+                    Collaborated with cross-functional teams to ensure seamless
+                    integration and deployment.
+                  </li>
                 </ul>
               </div>
 
@@ -78,11 +107,30 @@ const Experience = () => {
                 </h5>
                 <div className="flex flex-wrap gap-3">
                   {[
-                    { icon: <SiTypescript className="text-blue-400" size={20} />, name: "TypeScript" },
-                    { icon: <SiReact className="text-cyan-400" size={20} />, name: "React" },
-                    { icon: <SiNodedotjs className="text-green-400" size={20} />, name: "Node.js" },
-                    { icon: <SiRedis className="text-red-400" size={20} />, name: "Redis" },
-                    { icon: <SiMysql className="text-orange-400" size={20} />, name: "MySQL" },
+                    {
+                      icon: (
+                        <SiTypescript className="text-blue-400" size={20} />
+                      ),
+                      name: "TypeScript",
+                    },
+                    {
+                      icon: <SiReact className="text-cyan-400" size={20} />,
+                      name: "React",
+                    },
+                    {
+                      icon: (
+                        <SiNodedotjs className="text-green-400" size={20} />
+                      ),
+                      name: "Node.js",
+                    },
+                    {
+                      icon: <SiRedis className="text-red-400" size={20} />,
+                      name: "Redis",
+                    },
+                    {
+                      icon: <SiMysql className="text-orange-400" size={20} />,
+                      name: "MySQL",
+                    },
                   ].map((tech, index) => (
                     <motion.div
                       key={index}

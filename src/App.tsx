@@ -25,13 +25,13 @@ function App() {
     <section id="Home"> 
     <LandingPage/>
     </section>
-    <section id="Project">
+    <section id="Projects">
     <ProjectPath/>
     </section>
     <section id="Experience">
       <Experience/>
     </section>
-    <section id="Tech Stack"> 
+    <section id="TechStack"> 
       <TechStack/>
     </section>
     <section id="Education">
@@ -40,6 +40,9 @@ function App() {
     <section id="Contact"> 
       <Contact/>
     </section>
+    <footer className="text-gray-200 text-center text-sm p-4">
+    Developed by Hassam Ali
+  </footer>
   </div>);
 }
 

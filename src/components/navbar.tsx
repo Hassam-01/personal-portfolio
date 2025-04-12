@@ -26,22 +26,28 @@ export default function Navbar() {
     <div className="sticky top-0 z-50  bg-opacity-80 backdrop-blur-lg shadow-lg">
       <div className="flex justify-between items-center text-white p-2 max-w-7xl mx-auto">
         {/* Logo */}
-        <div className="text-2xl font-bold">
+        <div className="text-2xl font-bold font-pacifico tracking-widest bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 text-transparent bg-clip-text ">
           <h1>Hassam</h1>
         </div>
 
         {/* Desktop Links */}
         <div className="hidden md:flex space-x-12 text-lg font-medium  items-center">
-          <a href="#home" className="hover:text-gray-400 transition">
+          <a href="#Home" className="hover:text-gray-400 transition">
             Home
           </a>
-          <a href="#projects" className="hover:text-gray-400 transition">
+          <a href="#Projects" className="hover:text-gray-400 transition">
             Projects
           </a>
-          <a href="#about" className="hover:text-gray-400 transition">
-            About
+          <a href="#Experience" className="hover:text-gray-400 transition">
+            Experience
           </a>
-          <a href="#contact" className="hover:text-gray-400 transition">
+          <a href="#TechStack" className="hover:text-gray-400 transition">
+            Tech Stack
+          </a>
+          <a href="#Education" className="hover:text-gray-400 transition">
+            Education
+          </a>
+          <a href="#Contact" className="hover:text-gray-400 transition">
             Contact
           </a>
         </div>
