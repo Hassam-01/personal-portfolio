@@ -42,7 +42,8 @@ const Experience = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mb-12 p-6 rounded-xl shadow-lg bg-gray-800 border border-gray-700"
+          className="mb-12 p-6 rounded-xl shadow-lg"
+          style={{background: "linear-gradient(145deg, rgba(45, 45, 45, 0.8), rgba(25, 25, 25, 0.8))"}}
         >
           <div className="flex flex-col md:flex-row gap-6">
             {/* Company Logo/Icon */}

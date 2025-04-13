@@ -117,54 +117,56 @@ export default function Navbar() {
           className="absolute top-full left-0 right-0 bg-gray-900 text-white p-4 space-y-4 z-50"
         >
           <a
-            href="#home"
+            href="#Home"
             className="block hover:text-gray-400 transition"
             onClick={() => setIsOpen(false)}
           >
             Home
           </a>
           <a
-            href="#projects"
+            href="#Projects"
             className="block hover:text-gray-400 transition"
             onClick={() => setIsOpen(false)}
           >
             Projects
           </a>
           <a
-            href="#about"
+            href="#About"
             className="block hover:text-gray-400 transition"
             onClick={() => setIsOpen(false)}
           >
             About
           </a>
           <a
-            href="#contact"
+            href="#Contact"
             className="block hover:text-gray-400 transition"
             onClick={() => setIsOpen(false)}
           >
             Contact
           </a>
-          <a
-            href="https://www.instagram.com/ali.hassam1/"
-            className="block hover:text-gray-400 transition"
-            onClick={() => setIsOpen(false)}
-          >
-            <FaInstagram />
-          </a>
-          <a
-            href="https://github.com/Hassam-01"
-            className="block hover:text-gray-400 transition"
-            onClick={() => setIsOpen(false)}
-          >
-            <IoLogoGithub />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/hassam-ali-14681618a/"
-            className="block hover:text-gray-400 transition"
-            onClick={() => setIsOpen(false)}
-          >
-            <GrLinkedin />
-          </a>
+          <div className="flex space-x-4 mt-4">
+            <a
+              href="https://www.instagram.com/ali.hassam1/"
+              className="block hover:text-gray-400 transition"
+              onClick={() => setIsOpen(false)}
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="https://github.com/Hassam-01"
+              className="block hover:text-gray-400 transition"
+              onClick={() => setIsOpen(false)}
+            >
+              <IoLogoGithub />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/hassam-ali-14681618a/"
+              className="block hover:text-gray-400 transition"
+              onClick={() => setIsOpen(false)}
+            >
+              <GrLinkedin />
+            </a>
+          </div>
         </div>
       )}
     </div>
